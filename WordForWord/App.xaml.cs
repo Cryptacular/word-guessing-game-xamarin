@@ -8,7 +8,7 @@ namespace WordForWord
 		{
 			InitializeComponent();
 
-			MainPage = new WordForWordPage();
+			MainPage = new SignInPage();
 		}
 
 		protected override void OnStart()
