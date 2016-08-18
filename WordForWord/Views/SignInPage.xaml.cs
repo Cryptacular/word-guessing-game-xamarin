@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace WordForWord
+namespace WordForWord.Views
 {
 	public partial class SignInPage : ContentPage
 	{

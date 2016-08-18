@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using WordForWord.ViewModels;
+using WordForWord.Views;
+using Xamarin.Forms;
+using XLabs.Forms.Mvvm;
 
 namespace WordForWord
 {
@@ -6,9 +9,13 @@ namespace WordForWord
 	{
 		public App()
 		{
-			InitializeComponent();
+			RegisterViews();
+			MainPage = new NavigationPage((Page)ViewFactory.CreatePage<SignInViewModel, SignInPage>());
+		}
 
-			MainPage = new SignInPage();
+		private void RegisterViews()
+		{
+			ViewFactory.Register<SignInPage, SignInViewModel>();
 		}
 
 		protected override void OnStart()
